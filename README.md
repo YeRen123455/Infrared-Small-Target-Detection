@@ -5,7 +5,7 @@
 
 The code and trained models of:
 
-Learning Pixel-level Semantic Affinity with Image-level Supervision for Weakly Supervised Semantic Segmentation, Jiwoon Ahn and Suha Kwak, CVPR 2018 [[Paper]](https://arxiv.org/abs/1803.10464)
+Dense Nested Attention Network for Infrared Small Target Detection, Boyang Li, Chao Xiao and Longguang Wang, arxiv 2021 [[Paper]](https://arxiv.org/pdf/2106.00487.pdf)
 
 We have developed a framework based on AffinityNet to generate accurate segmentation labels of training images given their image-level class labels only. A segmentation network learned with our synthesized labels outperforms previous state-of-the-arts by large margins on the PASCAL VOC 2012.
 
