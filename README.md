@@ -70,8 +70,6 @@ python test_and_visulization.py --base_size 256 --crop_size 256 --st_model [trai
 python demo.py --base_size 256 --crop_size 256 --img_demo_dir [img_demo_dir] --img_demo_index [image_name]  --model [model name] --backbone resnet_18  --deep_supervision True --test_batch_size 1 --mode TXT  --suffix [img_suffix]
 ```
 
-
-
 ## Results and Trained Models
 
 #### Qualitative Results
