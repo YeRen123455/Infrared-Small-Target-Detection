@@ -54,18 +54,18 @@ python train.py --base_size 256 --crop_size 256 --epochs 1500 --dataset [dataset
 python test.py --base_size 256 --crop_size 256 --st_model [trained model path] --model_dir [model_dir] --dataset [dataset-name] --split_method 50_50 --model [model name] --backbone resnet_18  --deep_supervision True --test_batch_size 1 --mode TXT 
 ```
 
-#### (Optional) Visulize your predicts.
+#### (Optional 1) Visulize your predicts.
 
 ```bash
 python visulization.py --base_size 256 --crop_size 256 --st_model [trained model path] --model_dir [model_dir] --dataset [dataset-name] --split_method 50_50 --model [model name] --backbone resnet_18  --deep_supervision True --test_batch_size 1 --mode TXT 
 ```
 
-#### (Optiona2) Test and visulization.
+#### (Optional 2) Test and visulization.
 ```bash
 python test_and_visulization.py --base_size 256 --crop_size 256 --st_model [trained model path] --model_dir [model_dir] --dataset [dataset-name] --split_method 50_50 --model [model name] --backbone resnet_18  --deep_supervision True --test_batch_size 1 --mode TXT 
 ```
 
-#### (Optiona3) Demo (with your own IR image).
+#### (Optional 3) Demo (with your own IR image).
 ```bash
 python demo.py --base_size 256 --crop_size 256 --img_demo_dir [img_demo_dir] --img_demo_index [image_name]  --model [model name] --backbone resnet_18  --deep_supervision True --test_batch_size 1 --mode TXT  --suffix [img_suffix]
 ```
