@@ -5,12 +5,15 @@
 
 Dense Nested Attention Network for Infrared Small Target Detection, Boyang Li, Chao Xiao, Longguang Wang, and Yingqian Wang, arxiv 2021 [[Paper]](https://arxiv.org/pdf/2106.00487.pdf)
 
-We propose a dense nested attention network (DNANet) to achieve accurate single-frame infrared small target detection and develop an open-sourced infrared small target dataset (namely, NUDT-SIRST) in this paper. Experiments on both public (e.g., NUAA-SIRST, NUST-SIRST) and our self-developed datasets demonstrate the effectiveness of our method.
+We propose a dense nested attention network (DNANet) to achieve accurate single-frame infrared small target detection and develop an open-sourced infrared small target dataset (namely, NUDT-SIRST) in this paper. Experiments on both public (e.g., NUAA-SIRST, NUST-SIRST) and our self-developed datasets demonstrate the effectiveness of our method. The contribution of this paper are as follows:
+1. We propose a dense nested attention network (namely, DNANet) to maintain small targets in deep layers.
+2. An open-sourced dataset (i.e., NUDT-SIRST) with rich target shapes, target sizes, clutter backgrounds, and ground truth annotations.
+3. Performing well on all existing SIRST datasets.
 
 ## Dataset Introduction
-NUDT-SIRST is a synthesized dataset, which contains 1327 images with resolution of 256x256. The advantage of synthesized dataset compared to real dataset lies in three aspesets
-1. Accurate annotations
-2. Massive generation with low cost (i.e., time and money)
+NUDT-SIRST is a synthesized dataset, which contains 1327 images with resolution of 256x256. The advantage of synthesized dataset compared to real dataset lies in three aspesets:
+1. Accurate annotations.
+2. Massive generation with low cost (i.e., time and money).
 3. Numerous categories of target, rich target sizes, diverse clutter backgrounds.
 
 ## Citation
@@ -31,9 +34,8 @@ If you find the code useful, please consider citing our paper using the followin
 * [The NUAA-SIRST download dir](https://github.com/YimianDai/sirst)
 * [The NUST-SIRST download dir](https://github.com/wanghuanphd/MDvsFA_cGAN) 
 
+
 ## Usage
-
-
 #### On windows:
 ```
 Click train.py and run it. (All parameters are s)
