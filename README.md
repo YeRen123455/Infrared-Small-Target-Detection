@@ -7,7 +7,7 @@ The code and trained models of:
 
 Dense Nested Attention Network for Infrared Small Target Detection, Boyang Li, Chao Xiao and Longguang Wang, arxiv 2021 [[Paper]](https://arxiv.org/pdf/2106.00487.pdf)
 
-We propose a dense nested attention network (DNANet) to generate accurate single-frame infrared small target detection and develop an open-sourced infrared small target dataset (namely, NUDT-SIRST) in this paper. Experiments on both public (e.g., NUAA-SIRST, NUST-SIRST) and our self-developed datasets demonstrate the effectiveness of our method.
+We propose a dense nested attention network (DNANet) to achieve accurate single-frame infrared small target detection and develop an open-sourced infrared small target dataset (namely, NUDT-SIRST) in this paper. Experiments on both public (e.g., NUAA-SIRST, NUST-SIRST) and our self-developed datasets demonstrate the effectiveness of our method.
 
 
 >*Our code is implemented in pytorch. The default setting is pytorch==1.1.0, python==3.6, CUDA==10.1. This code also work well on device with pytorch==1.7.0, python==3.7, CUDA==11.1.
@@ -24,11 +24,10 @@ If you find the code useful, please consider citing our paper using the followin
 ```
 
 ## Prerequisite
-* Tested on Ubuntu 16.04, with Python 3.5, PyTorch 0.4, Torchvision 0.2.1, CUDA 9.0, and 1x NVIDIA TITAN X (Pascal).
-* [The PASCAL VOC 2012 development kit](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/):
-You also need to specify the path ('voc12_root') of your downloaded dev kit.
-* (Optional) If you want to try with the VGG-16 based network, PyCaffe and VGG-16 ImageNet pretrained weights [[vgg16_20M.caffemodel]](http://liangchiehchen.com/projects/Init%20Models.html)
-* (Optional) If you want to try with the ResNet-38 based network, Mxnet and ResNet-38 pretrained weights [[ilsvrc-cls_rna-a1_cls1000_ep-0001.params]](https://github.com/itijyou/ademxapp)
+* Tested on Ubuntu 16.04, with Python 3.7, PyTorch 1.7, Torchvision 0.8.1, CUDA 11.1, and 1x NVIDIA 3090 and also 
+* Tested on Windows 10  , with Python 3.6, PyTorch 1.1, Torchvision 0.3.0, CUDA 10.0, and 1x NVIDIA 1080Ti.
+* [The NUDT-SIRST download dir](https://drive.google.com/drive/folders/1YGoYaBi9dLwoTwoeTytEs5m-VeeCDXf7?usp=sharing) (coming soon)
+
 
 ## Usage
 #### 1. Train a classification network to get CAMs.
