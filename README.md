@@ -7,19 +7,19 @@ The code and trained models of:
 
 Dense Nested Attention Network for Infrared Small Target Detection, Boyang Li, Chao Xiao and Longguang Wang, arxiv 2021 [[Paper]](https://arxiv.org/pdf/2106.00487.pdf)
 
-We have developed a framework based on AffinityNet to generate accurate segmentation labels of training images given their image-level class labels only. A segmentation network learned with our synthesized labels outperforms previous state-of-the-arts by large margins on the PASCAL VOC 2012.
+We propose a dense nested attention network (DNANet) to generate accurate single-frame infrared small target detection and develop an open-sourced infrared small target dataset (namely, NUDT-SIRST) in this paper. Experiments on both public (e.g., NUAA-SIRST, NUST-SIRST) and our self-developed datasets demonstrate the effectiveness of our method.
 
->*Our code was first implemented in Tensorflow at the time of CVPR 2018 submssion, and later we migrated to PyTorch. Some trivial details (optimizer, channel size, and etc.) have been changed.
+
+>*Our code is implemented in pytorch. The default setting is pytorch==1.1.0, python==3.6, CUDA==10.1. This code also work well on device with pytorch==1.7.0, python==3.7, CUDA==11.1.
 
 ## Citation
 If you find the code useful, please consider citing our paper using the following BibTeX entry.
 ```
-@InProceedings{Ahn_2018_CVPR,
-author = {Ahn, Jiwoon and Kwak, Suha},
-title = {Learning Pixel-Level Semantic Affinity With Image-Level Supervision for Weakly Supervised Semantic Segmentation},
-booktitle = {The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
-month = {June},
-year = {2018}
+@article{li2021dense,
+  title={Dense Nested Attention Network for Infrared Small Target Detection},
+  author={Li, Boyang and Xiao, Chao and Wang, Longguang and Wang, Yingqian and Lin, Zaiping and Li, Miao and An, Wei and Guo, Yulan},
+  journal={arXiv preprint arXiv:2106.00487},
+  year={2021}
 }
 ```
 
