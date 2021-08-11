@@ -1,8 +1,6 @@
 # Dense Nested Attention Network for Infrared Small Target Detection
 
-**This code is deprecated. Please see https://github.com/jiwoon-ahn/irn instead.**
-
-![outline](fig_outline.png)
+![outline](overall_structure.jpg)
 ## Introduction
 
 The code and trained models of:
