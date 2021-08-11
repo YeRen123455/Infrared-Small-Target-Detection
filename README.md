@@ -7,7 +7,7 @@ Dense Nested Attention Network for Infrared Small Target Detection, Boyang Li, C
 
 We propose a dense nested attention network (DNANet) to achieve accurate single-frame infrared small target detection and develop an open-sourced infrared small target dataset (namely, NUDT-SIRST) in this paper. Experiments on both public (e.g., NUAA-SIRST, NUST-SIRST) and our self-developed datasets demonstrate the effectiveness of our method. The contribution of this paper are as follows:
 1. We propose a dense nested attention network (namely, DNANet) to maintain small targets in deep layers.
-2. An open-sourced dataset (i.e., NUDT-SIRST) with rich target shapes, target sizes, clutter backgrounds, and ground truth annotations.
+2. An open-sourced dataset (i.e., NUDT-SIRST) with rich targets.
 3. Performing well on all existing SIRST datasets.
 
 ## Dataset Introduction
@@ -102,3 +102,6 @@ This code is highly borrowed from [ACM](https://github.com/YimianDai/open-acm). 
 1. Dai Y, Wu Y, Zhou F, et al. Asymmetric contextual modulation for infrared small target detection[C]//Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision. 2021: 950-959. [[code]](https://github.com/YimianDai/open-acm) 
 2. Zhou Z, Siddiquee M M R, Tajbakhsh N, et al. Unet++: Redesigning skip connections to exploit multiscale features in image segmentation[J]. IEEE transactions on medical imaging, 2019, 39(6): 1856-1867. [[code]](https://github.com/MrGiovanni/UNetPlusPlus)
 3. He K, Zhang X, Ren S, et al. Deep residual learning for image recognition[C]//Proceedings of the IEEE conference on computer vision and pattern recognition. 2016: 770-778. [[code]](https://github.com/rwightman/pytorch-image-models)
+
+## To Do
+Upload NUDT-SIRST
