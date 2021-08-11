@@ -38,7 +38,7 @@ If you find the code useful, please consider citing our paper using the followin
 ## Usage
 #### On windows:
 ```
-Click train.py and run it. 
+Click on train.py and run it. 
 ```
 
 #### On Ubuntu:
@@ -81,11 +81,13 @@ python demo.py --base_size 256 --crop_size 256 --img_demo_dir [img_demo_dir] --i
 #### Quantative Results 
 on NUDT-SIRST
 | Model         | mIoU (x10(-2)) | Pd (x10(-2))|  Fa (x10(-6)) |
-| ------------- |:-------------:|:-----:|:-----:|
+| ------------- |:-------------:|:-----:|:-----:|:-----:|
 | DNANet-VGG-10 | 85.23 | 96.95 | 6.782|
 | DNANet-ResNet-10| 86.36 | 97.39 | 6.897 |
 | DNANet-ResNet-18| 87.09 | 98.73 | 4.223 |
+| DNANet-ResNet-18| 88.61 | 98.42 | 4.30 | [[Weights]](https://drive.google.com/file/d/1NDvjOiWecfWNPaO12KeIgiJMTKSFS6wj/view?usp=sharing) |
 | DNANet-ResNet-34| 86.87 | 97.98 | 3.710 |
+
 
 on NUAA-SIRST
 | Model         | mIoU (x10(-2)) | Pd (x10(-2))|  Fa (x10(-6)) |
@@ -93,6 +95,7 @@ on NUAA-SIRST
 | DNANet-VGG-10 | 74.96 | 97.34 | 26.73 |
 | DNANet-ResNet-10| 76.24 | 97.71 | 12.80 |
 | DNANet-ResNet-18| 77.47 | 98.48 | 2.353 |
+| DNANet-ResNet-18| 79.26 | 98.48 | 2.30 | [[Weights]](https://drive.google.com/file/d/1W0jFN9ZlaIdGFemYKi34tmJfGxjUGCRc/view?usp=sharing) |
 | DNANet-ResNet-34| 77.54 | 98.10 | 2.510 |
 
 
