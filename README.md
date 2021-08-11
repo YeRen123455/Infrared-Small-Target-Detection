@@ -1,4 +1,4 @@
-# Learning Pixel-level Semantic Affinity with Image-level Supervision
+# Dense Nested Attention Network for Infrared Small Target Detection
 
 **This code is deprecated. Please see https://github.com/jiwoon-ahn/irn instead.**
 
