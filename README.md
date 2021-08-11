@@ -1,6 +1,6 @@
 # Dense Nested Attention Network for Infrared Small Target Detection
 
-![outline](overall_structure.jpg)
+![outline](overall_structure.png)
 ## Algorithm Introduction
 
 Dense Nested Attention Network for Infrared Small Target Detection, Boyang Li, Chao Xiao, Longguang Wang, and Yingqian Wang, arxiv 2021 [[Paper]](https://arxiv.org/pdf/2106.00487.pdf)
