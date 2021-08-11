@@ -1,16 +1,19 @@
 # Dense Nested Attention Network for Infrared Small Target Detection
 
 ![outline](overall_structure.jpg)
-## Introduction
+## Algorithm Introduction
 
 The code and trained models of:
 
-Dense Nested Attention Network for Infrared Small Target Detection, Boyang Li, Chao Xiao and Longguang Wang, arxiv 2021 [[Paper]](https://arxiv.org/pdf/2106.00487.pdf)
+Dense Nested Attention Network for Infrared Small Target Detection, Boyang Li, Chao Xiao, Longguang Wang, and Yingqian Wang, arxiv 2021 [[Paper]](https://arxiv.org/pdf/2106.00487.pdf)
 
 We propose a dense nested attention network (DNANet) to achieve accurate single-frame infrared small target detection and develop an open-sourced infrared small target dataset (namely, NUDT-SIRST) in this paper. Experiments on both public (e.g., NUAA-SIRST, NUST-SIRST) and our self-developed datasets demonstrate the effectiveness of our method.
 
-
->*Our code is implemented in pytorch. The default setting is pytorch==1.1.0, python==3.6, CUDA==10.1. This code also work well on device with pytorch==1.7.0, python==3.7, CUDA==11.1.
+## Dataset Introduction
+NUDT-SIRST is a synthesized dataset, which contains 1327 images with resolution of 256x256. The advantages of synthesized dataset compared to real dataset lies in three aspesets
+1. Accurate annotations
+2. Massive generation with low cost (i.e., time and money)
+3. Numerous categories of target, rich target sizes, diverse clutter backgrounds.
 
 ## Citation
 If you find the code useful, please consider citing our paper using the following BibTeX entry.
@@ -28,41 +31,55 @@ If you find the code useful, please consider citing our paper using the followin
 * Tested on Windows 10  , with Python 3.6, PyTorch 1.1, Torchvision 0.3.0, CUDA 10.0, and 1x NVIDIA 1080Ti.
 * [The NUDT-SIRST download dir](https://drive.google.com/drive/folders/1YGoYaBi9dLwoTwoeTytEs5m-VeeCDXf7?usp=sharing) (coming soon)
 * [The NUAA-SIRST download dir](https://github.com/YimianDai/sirst)
-* [The NUST-SIRST download dir](https://github.com/wanghuanphd/MDvsFA_cGAN) (coming soon)
+* [The NUST-SIRST download dir](https://github.com/wanghuanphd/MDvsFA_cGAN) 
 
 ## Usage
-#### 1. Train a classification network to get CAMs.
 
-```bash
-python3 train_cls.py --lr 0.1 --batch_size 16 --max_epoches 15 --crop_size 448 --network [network.vgg16_cls | network.resnet38_cls] --voc12_root [your_voc12_root_folder] --weights [your_weights_file] --wt_dec 5e-4
+
+#### On windows:
+```
+Click train.py and run it. (All parameters are s)
 ```
 
-#### 2. Generate labels for AffinityNet by applying dCRF on CAMs.
+#### On Ubuntu:
+#### 1. Train.
 
 ```bash
-python3 infer_cls.py --infer_list voc12/train_aug.txt --voc12_root [your_voc12_root_folder] --network [network.vgg16_cls | network.resnet38_cls] --weights [your_weights_file] --out_cam [desired_folder] --out_la_crf [desired_folder] --out_ha_crf [desired_folder]
+python train.py --base_size 256 --crop_size 256 --epochs 1500 --dataset [dataset-name] --split_method 50_50 --model [model name] --backbone resnet_18  --deep_supervision True --train_batch_size 16 --test_batch_size 16 --mode TXT
+```
+
+#### 2. Test.
+
+```bash
+python test.py --base_size 256 --crop_size 256 --st_model [trained model path] --model_dir [model_dir] --dataset [dataset-name] --split_method 50_50 --model [model name] --backbone resnet_18  --deep_supervision True --test_batch_size 1 --mode TXT 
+```
+
+#### (Optional) Visulize your predicts.
+
+```bash
+python visulization.py --base_size 256 --crop_size 256 --st_model [trained model path] --model_dir [model_dir] --dataset [dataset-name] --split_method 50_50 --model [model name] --backbone resnet_18  --deep_supervision True --test_batch_size 1 --mode TXT 
+```
+
+#### (Optiona2) Test and visulization.
+```bash
+python test_and_visulization.py --base_size 256 --crop_size 256 --st_model [trained model path] --model_dir [model_dir] --dataset [dataset-name] --split_method 50_50 --model [model name] --backbone resnet_18  --deep_supervision True --test_batch_size 1 --mode TXT 
+```
+
+#### (Optiona3) Demo (with your own IR image).
+```bash
+python demo.py --base_size 256 --crop_size 256 --img_demo_dir [img_demo_dir] --img_demo_index [image_name]  --model [model name] --backbone resnet_18  --deep_supervision True --test_batch_size 1 --mode TXT  --suffix [img_suffix]
 ```
 
 
-#### (Optional) Check the accuracy of CAMs.
-```bash
-python3 infer_cls.py --infer_list voc12/val.txt --voc12_root [your_voc12_root_folder] --network network.resnet38_cls --weights res38_cls.pth --out_cam_pred [desired_folder]
-```
 
-
-#### 3. Train AffinityNet with the labels
-
-```bash
-python3 train_aff.py --lr 0.1 --batch_size 8 --max_epoches 8 --crop_size 448 --voc12_root [your_voc12_root_folder] --network [network.vgg16_aff | network.resnet38_aff] --weights [your_weights_file] --wt_dec 5e-4 --la_crf_dir [your_output_folder] --ha_crf_dir [your_output_folder]
-```
-
-#### 4. Perform Random Walks on CAMs
-
-```bash
-python3 infer_aff.py --infer_list [voc12/val.txt | voc12/train.txt] --voc12_root [your_voc12_root_folder] --network [network.vgg16_aff | network.resnet38_aff] --weights [your_weights_file] --cam_dir [your_output_folder] --out_rw [desired_folder]
-```
 
 ## Results and Trained Models
+
+#### Qualitative Results
+
+![outline](overall_structure.jpg)
+
+
 #### Class Activation Map
 
 | Model         | Train (mIoU)    | Val (mIoU)    | |
