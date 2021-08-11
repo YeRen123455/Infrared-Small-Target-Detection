@@ -10,7 +10,7 @@ Dense Nested Attention Network for Infrared Small Target Detection, Boyang Li, C
 We propose a dense nested attention network (DNANet) to achieve accurate single-frame infrared small target detection and develop an open-sourced infrared small target dataset (namely, NUDT-SIRST) in this paper. Experiments on both public (e.g., NUAA-SIRST, NUST-SIRST) and our self-developed datasets demonstrate the effectiveness of our method.
 
 ## Dataset Introduction
-NUDT-SIRST is a synthesized dataset, which contains 1327 images with resolution of 256x256. The advantages of synthesized dataset compared to real dataset lies in three aspesets
+NUDT-SIRST is a synthesized dataset, which contains 1327 images with resolution of 256x256. The advantage of synthesized dataset compared to real dataset lies in three aspesets
 1. Accurate annotations
 2. Massive generation with low cost (i.e., time and money)
 3. Numerous categories of target, rich target sizes, diverse clutter backgrounds.
@@ -77,10 +77,9 @@ python demo.py --base_size 256 --crop_size 256 --img_demo_dir [img_demo_dir] --i
 
 #### Qualitative Results
 
-![outline](overall_structure.jpg)
+![outline](Qualitative_result.png)
 
-
-#### Class Activation Map
+#### Quantative Results
 
 | Model         | Train (mIoU)    | Val (mIoU)    | |
 | ------------- |:-------------:|:-----:|:-----:|
