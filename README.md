@@ -3,8 +3,6 @@
 ![outline](overall_structure.jpg)
 ## Algorithm Introduction
 
-The code and trained models of:
-
 Dense Nested Attention Network for Infrared Small Target Detection, Boyang Li, Chao Xiao, Longguang Wang, and Yingqian Wang, arxiv 2021 [[Paper]](https://arxiv.org/pdf/2106.00487.pdf)
 
 We propose a dense nested attention network (DNANet) to achieve accurate single-frame infrared small target detection and develop an open-sourced infrared small target dataset (namely, NUDT-SIRST) in this paper. Experiments on both public (e.g., NUAA-SIRST, NUST-SIRST) and our self-developed datasets demonstrate the effectiveness of our method.
@@ -72,27 +70,27 @@ python demo.py --base_size 256 --crop_size 256 --img_demo_dir [img_demo_dir] --i
 
 
 
-
 ## Results and Trained Models
 
 #### Qualitative Results
 
 ![outline](Qualitative_result.png)
 
-#### Quantative Results
-
-| Model         | Train (mIoU)    | Val (mIoU)    | |
+#### Quantative Results 
+on NUDT-SIRST
+| Model         | mIoU (x10(-2)) | Pd (x10(-2))|  Fa (x10(-6)) |
 | ------------- |:-------------:|:-----:|:-----:|
-| VGG-16        | 48.9 | 46.6 | [[Weights]](https://drive.google.com/file/d/1Dh5EniRN7FSVaYxSmcwvPq_6AIg-P8EH/view?usp=sharing) |
-| ResNet-38     | 47.7 | 47.2 | [[Weights]](https://drive.google.com/file/d/1xESB7017zlZHqxEWuh1Rb89UhjTGIKOA/view?usp=sharing) |
-| ResNet-38     | 48.0 | 46.8 | CVPR submission |
+| DNANet-VGG-10 | 85.23 | 96.95 | 6.782|
+| DNANet-ResNet-10| 86.36 | 97.39 | 6.897 |
+| DNANet-ResNet-18| 87.09 | 98.73 | 4.223 |
+| DNANet-ResNet-34| 86.87 | 97.98 | 3.710 |
 
-#### Random Walk with AffinityNet
+on NUAA-SIRST
+| Model         | mIoU (x10(-2)) | Pd (x10(-2))|  Fa (x10(-6)) |
+| ------------- |:-------------:|:-----:|:-----:|
+| DNANet-VGG-10 | 74.96 | 97.34 | 26.73 |
+| DNANet-ResNet-10| 76.24 | 97.71 | 12.80 |
+| DNANet-ResNet-18| 77.47 | 98.48 | 2.353 |
+| DNANet-ResNet-34| 77.54 | 98.10 | 2.510 |
 
-| Model         | alpha | Train (mIoU)    | Val (mIoU)    | |
-| ------------- |:-----:|:---------------:|:-------------:|:-----:|
-| VGG-16        | 4/16/32 | 59.6 | 54.0 | [[Weights]](https://drive.google.com/file/d/10ue1B20Q51aQ53T93RiaiKETlklzo4jp/view?usp=sharing) |
-| ResNet-38     | 4/16/32 | 61.0 | 60.2 | [[Weights]](https://drive.google.com/open?id=1mFvTH3siw0SS0vqPH0o9N3cI_ISQacwt) |
-| ResNet-38     | 4/16/24 | 58.1 | 57.0 | CVPR submission |
 
->*beta=8, gamma=5, t=256 for all settings
