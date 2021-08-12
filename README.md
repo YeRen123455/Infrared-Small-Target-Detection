@@ -31,8 +31,8 @@ If you find the code useful, please consider citing our paper using the followin
 * Tested on Ubuntu 16.04, with Python 3.7, PyTorch 1.7, Torchvision 0.8.1, CUDA 11.1, and 1x NVIDIA 3090 and also 
 * Tested on Windows 10  , with Python 3.6, PyTorch 1.1, Torchvision 0.3.0, CUDA 10.0, and 1x NVIDIA 1080Ti.
 * [The NUDT-SIRST download dir](https://drive.google.com/drive/folders/1YGoYaBi9dLwoTwoeTytEs5m-VeeCDXf7?usp=sharing) (coming soon)
-* [The NUAA-SIRST download dir](https://github.com/YimianDai/sirst) [[paper]](https://arxiv.org/pdf/2009.14530.pdf)
-* [The NUST-SIRST download dir](https://github.com/wanghuanphd/MDvsFA_cGAN) [[paper]](https://openaccess.thecvf.com/content_ICCV_2019/papers/Wang_Miss_Detection_vs._False_Alarm_Adversarial_Learning_for_Small_Object_ICCV_2019_paper.pdf)
+* [The NUAA-SIRST download dir](https://github.com/YimianDai/sirst) [[ACM]](https://arxiv.org/pdf/2009.14530.pdf)
+* [The NUST-SIRST download dir](https://github.com/wanghuanphd/MDvsFA_cGAN) [[MDvsFA]](https://openaccess.thecvf.com/content_ICCV_2019/papers/Wang_Miss_Detection_vs._False_Alarm_Adversarial_Learning_for_Small_Object_ICCV_2019_paper.pdf)
 
 
 ## Usage
