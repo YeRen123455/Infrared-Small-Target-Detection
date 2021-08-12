@@ -11,7 +11,7 @@ We propose a dense nested attention network (DNANet) to achieve accurate single-
 3. Performing well on all existing SIRST datasets.
 
 ## Dataset Introduction
-NUDT-SIRST is a synthesized dataset, which contains 1327 images with resolution of 256x256. The advantage of synthesized dataset compared to real dataset lies in three aspesets:
+NUDT-SIRST is a synthesized dataset, which contains 1327 images with resolution of 256x256. The advantage of synthesized dataset compared to real dataset lies in three aspets:
 1. Accurate annotations.
 2. Massive generation with low cost (i.e., time and money).
 3. Numerous categories of target, rich target sizes, diverse clutter backgrounds.
