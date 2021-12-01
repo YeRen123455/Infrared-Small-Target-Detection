@@ -99,7 +99,7 @@ on NUAA-SIRST
 on NUST-SIRST
 | Model         | mIoU (x10(-2)) | Pd (x10(-2))|  Fa (x10(-6)) ||
 | ------------- |:-------------:|:-----:|:-----:|:-----:|
-| DNANet-ResNet-18| 46.73 | 81.29 | 33.87 | [[Weights]](https://drive.google.com/file/d/1W0jFN9ZlaIdGFemYKi34tmJfGxjUGCRc/view?usp=sharing) |
+| DNANet-ResNet-18| 46.73 | 81.29 | 33.87 | [[Weights]](https://drive.google.com/file/d/1TF0bZRMsGuKzMhlHKH1LygScBveMcCS2/view?usp=sharing) |
 
 
 *This code is highly borrowed from [ACM](https://github.com/YimianDai/open-acm). Thanks to Yimian Dai.
