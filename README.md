@@ -96,6 +96,12 @@ on NUAA-SIRST
 | DNANet-ResNet-18| 79.26 | 98.48 | 2.30 | [[Weights]](https://drive.google.com/file/d/1W0jFN9ZlaIdGFemYKi34tmJfGxjUGCRc/view?usp=sharing) |
 | DNANet-ResNet-34| 77.54 | 98.10 | 2.510 |
 
+on NUST-SIRST
+| Model         | mIoU (x10(-2)) | Pd (x10(-2))|  Fa (x10(-6)) ||
+| ------------- |:-------------:|:-----:|:-----:|:-----:|
+| DNANet-ResNet-18| 46.73 | 81.29 | 33.87 | [[Weights]](https://drive.google.com/file/d/1W0jFN9ZlaIdGFemYKi34tmJfGxjUGCRc/view?usp=sharing) |
+
+
 *This code is highly borrowed from [ACM](https://github.com/YimianDai/open-acm). Thanks to Yimian Dai.
 
 *The overall repository style is highly borrowed from [PSA](https://github.com/jiwoon-ahn/psa). Thanks to jiwoon-ahn.
