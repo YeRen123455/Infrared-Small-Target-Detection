@@ -115,6 +115,7 @@ on NUAA-SIRST
 | DNANet-ResNet-34| 77.54 | 98.10 | 2.510 |
 
 on NUST-SIRST
+
 | Model         | mIoU (x10(-2)) | Pd (x10(-2))|  Fa (x10(-6)) |
 | ------------- |:-------------:|:-----:|:-----:|:-----:|
 | DNANet-ResNet-18| 46.73 | 81.29 | 33.87 | [[Weights]](https://drive.google.com/file/d/1TF0bZRMsGuKzMhlHKH1LygScBveMcCS2/view?usp=sharing) |
