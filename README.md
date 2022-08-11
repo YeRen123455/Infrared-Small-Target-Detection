@@ -118,6 +118,7 @@ on NUST-SIRST
 | Model         | mIoU (x10(-2)) | Pd (x10(-2))|  Fa (x10(-6)) |
 | ------------- |:-------------:|:-----:|:-----:|:-----:|
 | DNANet-ResNet-18| 46.73 | 81.29 | 33.87 | [[Weights]](https://drive.google.com/file/d/1TF0bZRMsGuKzMhlHKH1LygScBveMcCS2/view?usp=sharing) |
+
 *This code is highly borrowed from [ACM](https://github.com/YimianDai/open-acm). Thanks to Yimian Dai.
 
 *The overall repository style is highly borrowed from [PSA](https://github.com/jiwoon-ahn/psa). Thanks to jiwoon-ahn.
