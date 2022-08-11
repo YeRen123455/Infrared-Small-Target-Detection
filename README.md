@@ -1,6 +1,6 @@
 # Dense Nested Attention Network for Infrared Small Target Detection
 
-## Good News! Our paper has been accepted by IEEE Transaction on Image Processing. More interesting works and application on SIRST will be available soon. Please keep focus on our repo.
+## Good News! Our paper has been accepted by `IEEE Transaction on Image Processing`. Our team will release more interesting works and applications on SIRST soon. Please keep following our repository.
 
 ![outline](overall_structure.png)
 
@@ -116,7 +116,7 @@ on NUAA-SIRST
 
 on NUST-SIRST
 
-| Model         | mIoU (x10(-2)) | Pd (x10(-2))|  Fa (x10(-6)) |
+| Model         | mIoU (x10(-2)) | Pd (x10(-2))|  Fa (x10(-6)) ||
 | ------------- |:-------------:|:-----:|:-----:|:-----:|
 | DNANet-ResNet-18| 46.73 | 81.29 | 33.87 | [[Weights]](https://drive.google.com/file/d/1TF0bZRMsGuKzMhlHKH1LygScBveMcCS2/view?usp=sharing) |
 
