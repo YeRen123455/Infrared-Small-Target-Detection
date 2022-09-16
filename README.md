@@ -43,7 +43,7 @@ year={2021}}
 
 * Tested on Windows 10  , with Python 3.6, PyTorch 1.1, Torchvision 0.3.0, CUDA 10.0, and 1x NVIDIA 1080Ti.
 
-* [The NUDT-SIRST download dir](https://pan.baidu.com/s/1zz_-4LdseexgwRpkw41wTA?pwd=nudt) (Extraction Code: nudt)
+* [The NUDT-SIRST download dir](https://pan.baidu.com/s/1WdA_yOHDnIiyj4C9SbW_Kg?pwd=nudt) (Extraction Code: nudt)
 
 * [The NUAA-SIRST download dir](https://github.com/YimianDai/sirst) [[ACM]](https://arxiv.org/pdf/2009.14530.pdf)
 
