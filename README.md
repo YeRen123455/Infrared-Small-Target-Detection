@@ -31,11 +31,13 @@ NUDT-SIRST is a synthesized dataset, which contains 1327 images with resolution 
 If you find the code useful, please consider citing our paper using the following BibTeX entry.
 
 ```
-@article{li2021dense, 
-title={Dense Nested Attention Network for Infrared Small Target Detection},
-author={Li, Boyang and Xiao, Chao and Wang, Longguang and Wang, Yingqian and Lin, Zaiping and Li, Miao and An, Wei and Guo, Yulan},
-journal={arXiv preprint arXiv:2106.00487},
-year={2021}}
+@article{li2022dense,
+  title={Dense nested attention network for infrared small target detection},
+  author={Li, Boyang and Xiao, Chao and Wang, Longguang and Wang, Yingqian and Lin, Zaiping and Li, Miao and An, Wei and Guo, Yulan},
+  journal={IEEE Transactions on Image Processing},
+  year={2022},
+  publisher={IEEE}
+}
 ```
 
 ## Prerequisite
