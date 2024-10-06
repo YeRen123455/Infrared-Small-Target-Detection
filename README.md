@@ -31,12 +31,14 @@ NUDT-SIRST is a synthesized dataset, which contains 1327 images with resolution 
 If you find the code useful, please consider citing our paper using the following BibTeX entry.
 
 ```
-@inproceedings{li2023monte,
-  title={Monte Carlo linear clustering with single-point supervision is enough for infrared small target detection},
-  author={Li, Boyang and Wang, Yingqian and Wang, Longguang and Zhang, Fei and Liu, Ting and Lin, Zaiping and An, Wei and Guo, Yulan},
-  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
-  pages={1009--1019},
-  year={2023}
+@article{DNANet,
+  title={Dense nested attention network for infrared small target detection},
+  author={Li, Boyang and Xiao, Chao and Wang, Longguang and Wang, Yingqian and Lin, Zaiping and Li, Miao and An, Wei and Guo, Yulan},
+  journal={IEEE Transactions on Image Processing},
+  year={2023},
+  volume={32},
+  pages={1745-1758},
+  publisher={IEEE}
 }
 ```
 
@@ -61,19 +63,80 @@ Click on train.py and run it.
 
 #### On Ubuntu:
 
-#### 1. Preprocessing.
+#### 1. Train.
 
 ```bash
-python generate_single_point_Prior.py
+python train.py --base_size 256 --crop_size 256 --epochs 1500 --dataset [dataset-name] --split_method 50_50 --model [model name] --backbone resnet_18  --deep_supervision True --train_batch_size 16 --test_batch_size 16 --mode TXT
 
 ```
-#### 2. Pseudo Label Generation.
+#### 2. Test.
 
 ```bash
-python Baseline_NUAA.py
+python test.py --base_size 256 --crop_size 256 --st_model [trained model path] --model_dir [model_dir] --dataset [dataset-name] --split_method 50_50 --model [model name] --backbone resnet_18  --deep_supervision True --test_batch_size 1 --mode TXT 
 ```
 
-#### 3. Retrain SIRST Detection Network (e.g, DNANet) with the Generated Label.
+#### (Optional 1) Visulize your predicts.
+```bash
+python visulization.py --base_size 256 --crop_size 256 --st_model [trained model path] --model_dir [model_dir] --dataset [dataset-name] --split_method 50_50 --model [model name] --backbone resnet_18  --deep_supervision True --test_batch_size 1 --mode TXT 
+```
+
+#### (Optional 2) Test and visulization.
+```bash
+python test_and_visulization.py --base_size 256 --crop_size 256 --st_model [trained model path] --model_dir [model_dir] --dataset [dataset-name] --split_method 50_50 --model [model name] --backbone resnet_18  --deep_supervision True --test_batch_size 1 --mode TXT 
+```
+
+#### (Optional 3) Demo (with your own IR image).
+```bash
+python demo.py --base_size 256 --crop_size 256 --img_demo_dir [img_demo_dir] --img_demo_index [image_name]  --model [model name] --backbone resnet_18  --deep_supervision True --test_batch_size 1 --mode TXT  --suffix [img_suffix]
+
+```
+
+## Results and Trained Models
+#### Qualitative Results
+
+![outline](Qualitative_result.png)
+
+#### Quantative Results 
+
+on NUDT-SIRST
+
+| Model         | mIoU (x10(-2)) | Pd (x10(-2))|  Fa (x10(-6)) ||
+| ------------- |:-------------:|:-----:|:-----:|:-----:|
+| DNANet-VGG-10 | 85.23 | 96.95 | 6.782|
+| DNANet-ResNet-10| 86.36 | 97.39 | 6.897 |
+| DNANet-ResNet-18| 87.09 | 98.73 | 4.223 |
+| DNANet-ResNet-18| 88.61 | 98.42 | 4.30 | [[Weights]](https://drive.google.com/file/d/1NDvjOiWecfWNPaO12KeIgiJMTKSFS6wj/view?usp=sharing) |
+| DNANet-ResNet-34| 86.87 | 97.98 | 3.710 |
+
+
+on NUAA-SIRST
+| Model         | mIoU (x10(-2)) | Pd (x10(-2))|  Fa (x10(-6)) ||
+| ------------- |:-------------:|:-----:|:-----:|:-----:|
+| DNANet-VGG-10 | 74.96 | 97.34 | 26.73 |
+| DNANet-ResNet-10| 76.24 | 97.71 | 12.80 |
+| DNANet-ResNet-18| 77.47 | 98.48 | 2.353 |
+| DNANet-ResNet-18| 79.26 | 98.48 | 2.30 | [[Weights]](https://drive.google.com/file/d/1W0jFN9ZlaIdGFemYKi34tmJfGxjUGCRc/view?usp=sharing) |
+| DNANet-ResNet-34| 77.54 | 98.10 | 2.510 |
+
+on NUST-SIRST
+
+| Model         | mIoU (x10(-2)) | Pd (x10(-2))|  Fa (x10(-6)) ||
+| ------------- |:-------------:|:-----:|:-----:|:-----:|
+| DNANet-ResNet-18| 46.73 | 81.29 | 33.87 | [[Weights]](https://drive.google.com/file/d/1TF0bZRMsGuKzMhlHKH1LygScBveMcCS2/view?usp=sharing) |
+
+*This code is highly borrowed from [ACM](https://github.com/YimianDai/open-acm). Thanks to Yimian Dai.
+
+*The overall repository style is highly borrowed from [PSA](https://github.com/jiwoon-ahn/psa). Thanks to jiwoon-ahn.
+
+## Referrences
+
+1. Dai Y, Wu Y, Zhou F, et al. Asymmetric contextual modulation for infrared small target detection[C]//Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision. 2021: 950-959. [[code]](https://github.com/YimianDai/open-acm) 
+
+2. Zhou Z, Siddiquee M M R, Tajbakhsh N, et al. Unet++: Redesigning skip connections to exploit multiscale features in image segmentation[J]. IEEE transactions on medical imaging, 2019, 39(6): 1856-1867. [[code]](https://github.com/MrGiovanni/UNetPlusPlus)
+
+3. He K, Zhang X, Ren S, et al. Deep residual learning for image recognition[C]//Proceedings of the IEEE conference on computer vision and pattern recognition. 2016: 770-778. [[code]](https://github.com/rwightman/pytorch-image-models)
+
+
 
 
 
